@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="?attr/bg_bottom_nav"
+        android:id="@+id/ctl_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/iv_gallery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_circle_ripple"
+            android:focusable="true"
+            android:padding="15dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/gallery_icon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_flash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_circle_ripple"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="15dp"
+            android:src="@drawable/flash_off"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/jost_medium"
+            android:text="@string/scanner"
+            android:textColor="?attr/text_color"
+            android:textSize="@dimen/ts_22sp"
+            app:layout_constraintEnd_toStartOf="@id/iv_flash"
+            app:layout_constraintStart_toEndOf="@id/iv_gallery"
+            app:layout_constraintTop_toTopOf="@id/iv_flash"
+            app:layout_constraintBottom_toBottomOf="@id/iv_flash" />
+
+        <androidx.camera.view.PreviewView
+            android:id="@+id/camera_preview"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_flash" />
+
+        <com.tapbi.spark.qrcode.ui.custom.ViewfinderView
+            android:id="@+id/viewfinder"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:cornerColor="@color/white"
+            app:frameColor="@android:color/transparent"
+            app:laserColor="#2CA7FA"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_flash" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_place"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:background="@drawable/bg_place_code"
+            android:fontFamily="@font/jost_light"
+            android:paddingVertical="8dp"
+            android:paddingHorizontal="38dp"
+            android:text="@string/place_the_code_in_the_frame"
+            android:textColor="@color/white"
+            android:textSize="@dimen/ts_14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_flash" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ctl_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/bg_1">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="13dp"
+            android:fontFamily="@font/jost_medium"
+            android:text="@string/create_qr_code"
+            android:textColor="?attr/text_color"
+            android:textSize="@dimen/ts_22sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_history"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="11dp"
+            android:background="@drawable/bg_circle_ripple"
+            android:padding="8dp"
+            android:src="@drawable/ic_time_circle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/wrapper_view"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="14dp"
+            android:background="@drawable/bg_radius_16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_wifi"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+        <ImageView
+            android:id="@+id/iv_website"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:background="@drawable/custom_ripple"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/ic_web"
+            app:layout_constraintEnd_toStartOf="@+id/iv_text"
+            app:layout_constraintHorizontal_bias="0.375"
+            app:layout_constraintStart_toStartOf="@+id/wrapper_view"
+            app:layout_constraintTop_toTopOf="@+id/wrapper_view" />
+
+
+        <TextView
+            android:id="@+id/tv_website"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/jost_regular"
+            android:gravity="center"
+            android:text="@string/web"
+            android:textColor="?attr/text_color"
+            android:textSize="@dimen/ts_15sp"
+            app:layout_constraintEnd_toEndOf="@+id/iv_website"
+            app:layout_constraintStart_toStartOf="@+id/iv_website"
+            app:layout_constraintTop_toBottomOf="@+id/iv_website" />
+
+        <ImageView
+            android:id="@+id/iv_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_ripple"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/ic_text"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_website"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/iv_website" />
+
+        <TextView
+            android:id="@+id/tv_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/jost_regular"
+            android:gravity="center"
+            android:text="@string/create_qr_code_text"
+            android:textColor="?attr/text_color"
+            android:textSize="@dimen/ts_15sp"
+            app:layout_constraintEnd_toEndOf="@+id/iv_text"
+            app:layout_constraintStart_toStartOf="@+id/iv_text"
+            app:layout_constraintTop_toBottomOf="@+id/iv_text" />
+
+        <ImageView
+            android:id="@+id/iv_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_ripple"
+            android:clickable="true"
+            android:focusable="true"
+            android:fontFamily="@font/jost_regular"
+            android:src="@drawable/ic_phone"
+            app:layout_constraintEnd_toEndOf="@+id/wrapper_view"
+            app:layout_constraintHorizontal_bias="0.625"
+            app:layout_constraintStart_toEndOf="@+id/iv_text"
+            app:layout_constraintTop_toTopOf="@+id/iv_website" />
+
+        <TextView
+            android:id="@+id/tv_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="@string/phone"
+            android:textColor="?attr/text_color"
+            android:textSize="@dimen/ts_15sp"
+            app:layout_constraintEnd_toEndOf="@+id/iv_phone"
+            app:layout_constraintStart_toStartOf="@+id/iv_phone"
+            app:layout_constraintTop_toBottomOf="@+id/iv_phone" />
+
+        <ImageView
+            android:id="@+id/iv_mess"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/custom_ripple"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/ic_message"
+            app:layout_constraintStart_toStartOf="@+id/iv_website"
+            app:layout_constraintTop_toBottomOf="@+id/tv_website" />
+
+        <TextView
+            android:id="@+id/tv_mess"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/jost_regular"
+            android:gravity="center"
+            android:text="@string/mess"
+            android:textColor="?attr/text_color"
+            android:textSize="@dimen/ts_15sp"
+            app:layout_constraintEnd_toEndOf="@+id/iv_mess"
+            app:layout_constraintStart_toStartOf="@+id/iv_mess"
+            app:layout_constraintTop_toBottomOf="@+id/iv_mess" />
+
+        <ImageView
+            android:id="@+id/iv_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_ripple"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/ic_email"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_mess"
+            app:layout_constraintStart_toStartOf="@+id/iv_text"
+            app:layout_constraintTop_toTopOf="@+id/iv_mess" />
+
+
+        <TextView
+            android:id="@+id/tv_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/jost_regular"
+            android:gravity="center"
+            android:text="@string/create_qr_code_email"
+            android:textColor="?attr/text_color"
+            android:textSize="@dimen/ts_15sp"
+            app:layout_constraintEnd_toEndOf="@+id/iv_email"
+            app:layout_constraintStart_toStartOf="@+id/iv_email"
+            app:layout_constraintTop_toBottomOf="@+id/iv_email" />
+
+                <ImageView
+                    android:id="@+id/iv_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="@drawable/custom_ripple"
+                    android:src="@drawable/ic_location"
+                    app:layout_constraintStart_toStartOf="@+id/iv_mess"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_mess" />
+
+                <TextView
+                    android:id="@+id/tv_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:fontFamily="@font/jost_regular"
+                    android:gravity="center"
+                    android:text="@string/tv_location"
+                    android:textColor="?attr/text_color"
+                    android:textSize="@dimen/ts_15sp"
+                    app:layout_constraintEnd_toEndOf="@+id/iv_location"
+                    app:layout_constraintStart_toStartOf="@+id/iv_location"
+                    app:layout_constraintTop_toBottomOf="@+id/iv_location" />
+
+        <ImageView
+            android:id="@+id/iv_contact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_ripple"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/ic_contact"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_email"
+            app:layout_constraintStart_toStartOf="@+id/iv_phone"
+            app:layout_constraintTop_toTopOf="@+id/iv_email" />
+
+        <TextView
+            android:id="@+id/tv_contact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/jost_regular"
+            android:gravity="center"
+            android:text="@string/contact"
+            android:textColor="?attr/text_color"
+            android:textSize="@dimen/ts_15sp"
+            app:layout_constraintEnd_toEndOf="@+id/iv_contact"
+            app:layout_constraintStart_toStartOf="@+id/iv_contact"
+            app:layout_constraintTop_toBottomOf="@+id/iv_contact" />
+
+        <ImageView
+            android:id="@+id/iv_wifi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/custom_ripple"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/ic_wifi"
+            app:layout_constraintStart_toStartOf="@id/iv_email"
+            app:layout_constraintTop_toBottomOf="@+id/tv_email" />
+
+        <TextView
+            android:id="@+id/tv_wifi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/jost_regular"
+            android:gravity="center"
+            android:paddingBottom="18dp"
+            android:text="@string/wifi"
+            android:textColor="?attr/text_color"
+            android:textSize="@dimen/ts_15sp"
+            app:layout_constraintEnd_toEndOf="@+id/iv_wifi"
+            app:layout_constraintStart_toStartOf="@+id/iv_wifi"
+            app:layout_constraintTop_toBottomOf="@+id/iv_wifi" />
+
+        <ImageView
+            android:id="@+id/iv_event"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_ripple"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/ic_event"
+            app:layout_constraintStart_toStartOf="@id/iv_contact"
+            app:layout_constraintTop_toTopOf="@+id/iv_wifi" />
+
+        <TextView
+            android:id="@+id/tv_event"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/jost_regular"
+            android:gravity="center"
+            android:text="@string/event"
+            android:textColor="?attr/text_color"
+            android:textSize="@dimen/ts_15sp"
+            app:layout_constraintEnd_toEndOf="@+id/iv_event"
+            app:layout_constraintStart_toStartOf="@+id/iv_event"
+            app:layout_constraintTop_toBottomOf="@+id/iv_event" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/bg_1">
+
+
+    <TextView
+        android:id="@+id/tv_qr_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="14dp"
+        android:fontFamily="@font/jost_regular"
+        android:text="@string/message1"
+        android:textColor="#828282"
+        android:textSize="@dimen/ts_14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edt_to"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="14dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_radius_16dp"
+        android:fontFamily="@font/jost_regular"
+        android:gravity="center|start"
+        android:hint="@string/to1"
+        android:imeOptions="actionDone"
+        android:inputType="phone"
+        android:maxLines="1"
+        android:overScrollMode="always"
+        android:paddingStart="18dp"
+        android:paddingEnd="48dp"
+        android:paddingVertical="17dp"
+        android:scrollbarStyle="insideInset"
+        android:scrollbars="horizontal"
+        android:textColor="?attr/text_color"
+        android:textCursorDrawable="@drawable/edit_text_cursor"
+        android:textSize="@dimen/ts_18sp"
+        app:layout_constraintTop_toBottomOf="@id/tv_qr_type" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:src="@drawable/require_filed_icon"
+        app:layout_constraintEnd_toEndOf="@id/edt_to"
+        app:layout_constraintTop_toTopOf="@id/edt_to" />
+
+    <EditText
+        android:id="@+id/edt_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="14dp"
+        android:layout_marginTop="14dp"
+        android:background="@drawable/bg_radius_16dp"
+        android:fontFamily="@font/jost_regular"
+        android:gravity="center|start"
+        android:hint="@string/enter_you_text"
+        android:maxLines="4"
+        android:paddingHorizontal="18dp"
+        android:paddingVertical="18dp"
+        android:textColor="?attr/text_color"
+        android:textCursorDrawable="@drawable/edit_text_cursor"
+        android:textSize="@dimen/ts_18sp"
+        app:layout_constraintTop_toBottomOf="@id/edt_to" />
+
+    <ImageView
+        android:id="@+id/iv_add_contact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="18dp"
+        android:src="@drawable/import_contact_blue"
+        app:layout_constraintBottom_toBottomOf="@id/edt_to"
+        app:layout_constraintEnd_toEndOf="@id/edt_to"
+        app:layout_constraintTop_toTopOf="@id/edt_to" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:src="@drawable/require_filed_icon"
+        app:layout_constraintEnd_toEndOf="@id/edt_message"
+        app:layout_constraintTop_toTopOf="@id/edt_message" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

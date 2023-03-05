@@ -1,0 +1,103 @@
+plugins {
+    id 'com.android.application'
+    id 'com.google.gms.google-services'
+    id 'com.google.firebase.crashlytics'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'androidx.navigation.safeargs.kotlin'
+    id 'dagger.hilt.android.plugin'
+}
+
+android {
+    compileSdk versions.compileSdkVersion
+
+    defaultConfig {
+        applicationId "com.tapbi.spark.qrcode"
+        minSdk versions.minSdkVersion
+        targetSdk versions.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+        flavorDimensions "default"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        buildTypes {
+            release {
+                minifyEnabled true
+                proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            }
+            debug {
+                minifyEnabled true
+                proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            }
+        }
+    }
+
+    productFlavors {
+        product {
+            dimension "default"
+        }
+        dev {
+            dimension "default"
+            applicationId = 'com.tapbi.spark.qrcode'
+        }
+    }
+
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    buildFeatures {
+        viewBinding true
+        dataBinding true
+    }
+}
+
+dependencies {
+
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    /*Core*/
+    implementation libraries.androidAppCopmpat
+    implementation libraries.multidex
+    implementation libraries.ktxCore
+    /*UI*/
+    implementation libraries.androidxNavigationKtx
+    implementation libraries.androidUICommon
+    implementation libraries.materialDesign
+    implementation libraries.hilt
+    kapt libraries.hiltKpt
+    annotationProcessor libraries.hiltAP
+
+    /*Database ( if use Room) */
+    implementation libraries.room
+    annotationProcessor libraries.roomKpt
+    kapt libraries.roomAP
+
+    implementation libraries.glide
+    annotationProcessor libraries.glideAP
+
+    implementation libraries.timberLog
+    implementation libraries.lottie
+    implementation libraries.cameraX
+    implementation libraries.sharedPreferencesKtx
+    implementation libraries.googlePlayServices
+    implementation libraries.swipeLayout
+    implementation libraries.mlKit
+    implementation libraries.zxingAndroid
+    implementation platform('com.google.firebase:firebase-bom:$versions.firebaseVersion')
+    implementation libraries.crashFirebase
+    implementation libraries.gson
+
+
+    implementation 'com.github.trungsteven:ControlAdsTrue:1.3.97'
+    implementation 'com.ironsource.sdk:mediationsdk:7.2.3.1'
+
+
+}

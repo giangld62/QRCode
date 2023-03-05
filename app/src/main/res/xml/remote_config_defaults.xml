@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- START xml_defaults -->
+<defaultsMap>
+    <entry>
+        <key>ads_admob_open_show_time_out</key>
+        <value>30000</value>
+    </entry>
+    <entry>
+        <key>ads_admob_open_show_after_times</key>
+        <value>25000</value>
+    </entry>
+    <entry>
+        <key>ads_admob_interstitial_show_after_times</key>
+        <value>60000</value>
+    </entry>
+    <entry>
+        <key>ads_iron_interstitial_show_after_times</key>
+        <value>30000</value>
+    </entry>
+    <entry>
+        <key>ads_unity_interstitial_show_after_times</key>
+        <value>30000</value>
+    </entry>
+    <entry>
+        <key>ads_admob_native_show_after_times</key>
+        <value>45000</value>
+    </entry>
+    <entry>
+        <key>ads_facebook_interstitial_show_after_times</key>
+        <value>50000</value>
+    </entry>
+
+    <entry>
+        <key>remote_config_time_refresh_native_admob</key>
+        <value>50000</value>
+    </entry>
+    <entry>
+        <key>ads_optimize</key>
+        <value>0</value>
+    </entry>
+
+</defaultsMap>

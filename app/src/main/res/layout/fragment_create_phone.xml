@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/bg_1">
+
+    <TextView
+        android:fontFamily="@font/jost_regular"
+        android:textSize="@dimen/ts_14sp"
+        android:textColor="#828282"
+        android:id="@+id/tv_qr_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="14dp"
+        android:text="@string/phone1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:imeOptions="actionDone"
+        android:maxLines="1"
+        android:inputType="phone"
+        android:id="@+id/edt_phone_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="14dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_radius_16dp"
+        android:fontFamily="@font/jost_regular"
+        android:gravity="center|start"
+        android:hint="@string/enter_phone_number"
+        android:paddingHorizontal="18dp"
+        android:paddingVertical="18dp"
+        android:textColor="?attr/text_color"
+        android:textCursorDrawable="@drawable/edit_text_cursor"
+        android:textSize="@dimen/ts_18sp"
+        app:layout_constraintTop_toBottomOf="@id/tv_qr_type" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:src="@drawable/require_filed_icon"
+        app:layout_constraintEnd_toEndOf="@id/edt_phone_number"
+        app:layout_constraintTop_toTopOf="@id/edt_phone_number" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_import"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="34dp"
+        android:background="@drawable/bg_blue_ripple_radius_100"
+        android:drawableStart="@drawable/import_contact_icon"
+        android:drawablePadding="10dp"
+        android:paddingHorizontal="52dp"
+        android:paddingVertical="14dp"
+        android:text="@string/import1"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edt_phone_number" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

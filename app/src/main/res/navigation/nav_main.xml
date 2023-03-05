@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main.xml"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.tapbi.spark.qrcode.ui.splash.SplashFragment"
+        android:label="SplashFragment"
+        tools:layout="@layout/fragment_splash">
+        <action
+            android:id="@+id/action_splashFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.tapbi.spark.qrcode.ui.main.home.HomeFragment"
+        android:label="HomeFragment">
+    </fragment>
+    <fragment
+        android:id="@+id/createFragment"
+        android:name="com.tapbi.spark.qrcode.ui.main.create_qrcode.CreateFragment"
+        android:label="CreateFragment" />
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="com.tapbi.spark.qrcode.ui.main.history.HistoryFragment"
+        android:label="HistoryFragment">
+        <action
+            android:id="@+id/action_historyFragment_to_scanResultFragment"
+            app:destination="@id/scanResultFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/favoriteFragment"
+        android:name="com.tapbi.spark.qrcode.ui.main.favorite.FavoriteFragment"
+        android:label="FavoriteFragment" />
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="com.tapbi.spark.qrcode.ui.main.setting.SettingFragment"
+        android:label="SettingFragment" >
+        <action
+            android:id="@+id/action_settingFragment_to_webViewFragment"
+            app:destination="@id/webViewFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/scanResultFragment"
+        android:name="com.tapbi.spark.qrcode.ui.main.scan_result.ScanResultFragment"
+        android:label="ScanResultFragment">
+        <action
+            android:id="@+id/action_scanResultFragment_to_webViewFragment"
+            app:destination="@id/webViewFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/scannerFragment"
+        android:name="com.tapbi.spark.qrcode.ui.main.scanner.ScannerFragment"
+        android:label="ScannerFragment"
+        tools:layout="@layout/fragment_scanner" />
+    <fragment
+        android:id="@+id/showCodeFragment"
+        android:name="com.tapbi.spark.qrcode.ui.main.show_code.ShowCodeFragment"
+        android:label="ShowCodeFragment" />
+    <fragment
+        android:id="@+id/webViewFragment"
+        android:name="com.tapbi.spark.qrcode.ui.main.web.WebViewFragment"
+        android:label="WebViewFragment">
+        <argument
+            android:name="url"
+            app:argType="string"
+            android:defaultValue=""/>
+    </fragment>
+    <fragment
+        android:id="@+id/createQRCodeByType"
+        android:name="com.tapbi.spark.qrcode.ui.main.create_qrcode.create_by_type.CreateQRCodeByTypeFragment"
+        android:label="CreateQRCodeByType" />
+    <fragment
+        android:id="@+id/createHistoryFragment"
+        android:name="com.tapbi.spark.qrcode.ui.main.create_history.CreateHistoryFragment"
+        android:label="CreateHistoryFragment" />
+    <fragment
+        android:id="@+id/createQRCodeText"
+        android:name="com.tapbi.spark.qrcode.ui.main.create_qrcode.create_by_type.qrcode_text.CreateQRCodeText"
+        android:label="CreateQRCodeText" />
+</navigation>
